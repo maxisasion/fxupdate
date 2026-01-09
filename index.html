@@ -483,14 +483,8 @@
         
         .footer-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 30px;
-        }
-        
-        @media (max-width: 768px) {
-            .footer-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
         }
         
         @media (max-width: 576px) {
@@ -588,6 +582,18 @@
             font-weight: 600;
             text-align: right;
         }
+        
+        .price-tag {
+            background: linear-gradient(135deg, #00e676, #00c853);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 1.1em;
+            display: inline-block;
+            margin-left: 10px;
+            box-shadow: 0 0 15px rgba(0, 230, 118, 0.3);
+        }
     </style>
 </head>
 <body>
@@ -659,14 +665,19 @@
                     
                     <!-- Registration Form -->
                     <div id="register-form" class="hidden">
-                        <div style="background: rgba(255, 165, 2, 0.1); padding: 15px; border-radius: 10px; margin-bottom: 20px; border: 1px solid rgba(255, 165, 2, 0.3);">
-                            <h4 style="color: var(--warning); margin-bottom: 10px;">
-                                <i class="fas fa-shield-alt"></i> ACCOUNT ACTIVATION
+                        <div style="background: linear-gradient(135deg, rgba(0, 168, 255, 0.1), rgba(0, 210, 255, 0.1)); padding: 20px; border-radius: 12px; margin-bottom: 25px; border: 2px solid rgba(0, 168, 255, 0.3);">
+                            <h4 style="color: var(--accent-blue); margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+                                <i class="fas fa-gem"></i> PREMIUM MEMBERSHIP
                             </h4>
-                            <p style="color: var(--text-secondary); font-size: 0.9em;">
-                                <strong>Activation Code:</strong> R500<br>
-                                
-                              
+                            <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 15px;">
+                                <div>
+                                    <div style="color: var(--text-primary); font-weight: 600;">Lifetime Access</div>
+                                    <div style="color: var(--text-secondary); font-size: 0.9em;">One-time payment</div>
+                                </div>
+                                <div class="price-tag">R500</div>
+                            </div>
+                            <p style="color: var(--text-secondary); font-size: 0.9em; margin-top: 15px;">
+                                <i class="fas fa-info-circle"></i> Purchase activation code to continue
                             </p>
                         </div>
                         
@@ -844,26 +855,21 @@
             <div class="footer-grid">
                 <div class="footer-section">
                     <h4><i class="fas fa-crosshairs"></i> PROUDLYM SNIPER</h4>
-                    <p>Professional trading terminal with advanced market analysis tools and real-time signals.</p>
+                    <p>Professional trading terminal with advanced market analysis and real-time trading signals.</p>
                 </div>
                 
                 <div class="footer-section">
-                    <h4><i class="fas fa-user-tie"></i> CONTACT</h4>
-                    <p><strong>Owner:</strong> NTSIKA</p>
-                  
-                </div>
-                
-                <div class="footer-section">
-                    <h4><i class="fas fa-gem"></i> MEMBERSHIP</h4>
-                    <p><strong>Type:</strong> Lifetime Access</p>
-                    <p><strong>Fee:</strong> R500 once-off</p>
-                    <p><strong>Status:</strong> Active</p>
+                    <h4><i class="fas fa-gem"></i> PREMIUM FEATURES</h4>
+                    <p>• Real-time market analysis</p>
+                    <p>• Professional trading signals</p>
+                    <p>• Lifetime membership access</p>
+                    <p>• Priority support</p>
                 </div>
             </div>
             
             <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(0, 168, 255, 0.2);">
                 <p style="color: var(--text-secondary); font-size: 0.9em;">
-                    © 2024 ProudlyM Sniper Trading Terminal. All rights reserved.
+                    © 2024 ProudlyM Sniper Trading Terminal. Premium service.
                 </p>
             </div>
         </footer>
@@ -901,7 +907,7 @@
                 "BTC/USD": 120,
                 "XAU/USD": 60
             },
-            activationCodes: ["PROUDLYM300", "SNIPERVIP", "TRADEPRO2024", "BULLS890", "ACTIVATE321"]
+            activationCodes: ["PROUDLYM500", "SNIPER500", "TRADEPRO500", "PREMIUM500", "ACTIVATE500"]
         };
 
         // Initialize
